@@ -1,0 +1,1645 @@
+Python
+>>Python is a High Level Programming Language.
+>>Python is a Platform Independent Programming Language.
+>>Python is Dynamically Typed Language
+we can write : a= 10;
+	       b= 20;
+
+Note: Comment Put in Python is done by using
+- # for single line
+- ''' statemnets ''' for mutliple line
+- """ statemnets """ for mutliple line
+
+Program_1:
+#Program to Print 
+
+print("Hii");
+print("Hii")
+print('Hii');
+print('Hii')
+
+OutPut:
+Hii
+Hii
+Hii
+Hii
+
+Note:print() is a function
+
+>>Escape Sequence 
+-we cannot write as : 
+
+Program_2:
+print("This is the First Line /n
+and This is the Second Line");
+
+OutPut: 
+ File "C:\Code_P\Py_2.py", line 1
+    print("This is the First Line
+          ^
+SyntaxError: unterminated string literal (detected at line 1)
+
+-But we can write it as :
+ 
+Program_3:
+print("This is the First Line /nand This is the Second Line");
+
+OutPut:
+This is the First Line
+and This is the Second Line
+
+Note: 
+-for new line : \n
+-to use multile double quotes in line we use backslash before that : \
+
+Program_4:
+print("This is the "first line" and This is the 'Second Line'");
+
+OutPut:
+ File "C:\Code_P\Py_3.py", line 3
+    print("This is the "first line" and This is the 'Second Line'");
+          ^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+Program_5:
+print("This is the \"first line\" and This is the \'Second Line\'");
+
+OutPut:
+This is the "first line" and This is the 'Second Line'
+
+>>Note : We can write a multiple statements insid ethe print().
+
+Program_6:
+print("This is the First Statement ", 'This the Second Stataement', 12+18);
+
+OutPut:
+This is the First Statement  This the Second Stataement 30
+
+Program_7:
+#Use of Separator
+
+print("One","Two","Three","Four", sep="*");
+
+
+#Use of end
+
+print("One","Two","Three","Four", end="000");
+print("Five","Six","Seven","Eight", end="000");
+
+
+OutPut:
+One*Two*Three*Four
+One Two Three Four000Five Six Seven Eight000
+
+Variables and DataTypes
+In java we can concat using + operator,any datatype with an String Value and the resultant output will be String,
+But in Python it is not so if we try to concat using + operator,any datatype with an String Value the it will throw an error
+
+DataTypes:
+-Numeric: int , float , complex
+-Dictionary: {name:"value",rollnumber=90}
+-Boolean:True,False
+-Set
+-Sequence Types: String,List,Tuple
+
+complex=(realpart)+(imaginarypart)j
+List:["value","value_1",value_2]
+Tuple:("value","value_1",value_2)
+
+Program_8:
+a=10;
+b=20;
+c="String"
+
+print(a+b);
+print(b+c);//Type Error
+
+OutPut:
+30
+Traceback (most recent call last):
+  File "C:\Code_P\Py_6.py", line 8, in <module>
+    print(b+c);
+          ~^~
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+
+Note: In Python all are Object
+
+>>Operators
+Addition: +
+Subtraction: -
+Multiplication: *
+Divide: /
+Floor Division (Quotient): //
+Modulus (Remainder): %
+Exponent: **
+
+Program_9:
+print(5+3);	Adding		
+print(5-2);	Subtracting
+print(5*2);	Multiplying
+print(5/2);	Deviding
+print(5//2);	Deviding to get the Quotient
+print(5%2);	Deviding to get the Remainder
+print(5**2);	Power here we can say 5^2
+
+OutPut:
+8
+3
+10
+2.5
+2
+1
+25
+
+BrainStorming: Create a Dynamic Calculator
+
+>>Type Casting
+-Explicit Type Casting
+-Implicit Type Casting
+
+Program_10:
+#Explicit Type Casting
+a="1";
+b="2";
+print(a+b);
+print(int(a)+int(b));
+
+#Implicit Type Casting
+a=15.8;
+b=29;
+print(a+b);
+
+OutPut:	
+12
+3
+44.8
+
+>>User Input:
+Note: By default the value entered as a user input is always of String type.
+
+Program_11:
+a=input("Enter the Value x : ");
+print(a);
+b=input("Enter the Value y : ");
+print(b);
+print("The Sum : ", a+b);
+
+OutPut:
+Enter the Value x : 45
+45
+Enter the Value y :  fourty five
+ fourty five
+The Sum :  45 fourty five
+
+Program_12:
+a=input("Enter the Value x : ");
+print(a);
+b=input("Enter the Value y : ");
+print(b);
+print("The Sum : ", a+b);
+
+OutPut:
+Enter the Value x : 20
+20
+Enter the Value y : 23
+23
+The Sum :  2023
+
+Program_13:
+a=input("Enter the Value x : ");
+print(a);
+b=input("Enter the Value y : ");
+print(b);
+print("The Sum : ", int(a)+int(b));
+
+OutPut:
+Enter the Value x : 20
+20
+Enter the Value y : 23
+23
+The Sum :  43
+
+>>Strings in Python
+Program_14:
+print("This is 'Sentence'");
+print('This is "Sentence"');
+print("This is \"Sentence\"");
+print('This is \'Sentence\'');
+print("""We can also write any pragraph
+Sentence One
+Sentence Two
+Sentence Three
+in the above mentioned way""");
+print('''We can also write any pragraph
+Sentence Four
+Sentence Five
+Sentence Six
+in the above mentioned way''');
+
+OutPut:
+This is 'Sentence'
+This is "Sentence"
+This is "Sentence"
+This is 'Sentence'
+We can also write any pragraph
+Sentence One
+Sentence Two
+Sentence Three
+in the above mentioned way
+We can also write any pragraph
+Sentence Four
+Sentence Five
+Sentence Six
+in the above mentioned way
+
+Program_15:
+name="DeadShot";
+print(name[0]);
+print(name[1]);
+print(name[2]);
+print(name[3]);
+print(name[4]);
+print(name[5]);
+print(name[6]);
+print(name[7]);
+print(name[8]); //Index Error
+
+OutPut:
+D
+e
+a
+d
+S
+h
+o
+t
+Traceback (most recent call last):
+  File "C:\Code_P\Py_13.py", line 10, in <module>
+    print(name[8]);
+          ~~~~^^^
+IndexError: string index out of range
+
+Program_16:
+name="DeadShot";
+for Character in name :
+print(Character);
+
+OutPut:
+  File "C:\Code_P\Py_13.py", line 13
+    print(Character);
+    ^
+IndentationError: expected an indented block after 'for' statement on line 12
+
+Program_17:
+name="DeadShot";
+for Character in name :
+	print(Character);
+
+OutPut:
+D
+e
+a
+d
+S
+h
+o
+t
+
+String Methods
+#String Slice
+
+str="My name is Deadshot";
+print(len(str));
+print(str[0:len(str)]);
+print(str[3:len(str)]);
+print(str[3:4]);
+
+#capitalize() will make the first letter of the sentence Capital
+str="my name is deadshot";
+print(str.capitalize());
+
+str1="my name is Deadshot";
+print(str1.capitalize());
+
+str2="My name is Deadshot";
+print(str2.capitalize());
+
+#casefold() will convert string into lower case
+str="MY NAME IS DEADSHOT";
+str1="My Name is DeadSHOT";
+
+to be continued....
+
+>>Conditional Statement
+-if
+-if else
+-elif
+
+Program_18:
+#Conditional Statement
+'''
+#if else
+age=input("Enter the age : ");
+if(int(age)>18):
+	print("You are Eligible");
+else:
+	print("You are not Eligible");
+'''
+
+#elif
+month=input("Enter the month number: ");
+
+if(int(month)==1):
+	print("January");
+elif(int(month)==2):
+	print("Feb");
+elif(int(month)==3):
+	print("March");
+elif(int(month)==4):
+	print("April");
+elif(int(month)==5):
+	print("May");
+elif(int(month)==6):
+	print("June");
+elif(int(month)==7):
+	print("July");
+elif(int(month)==8):
+	print("August");
+elif(int(month)==9):
+	print("September");
+elif(int(month)==10):
+	print("October");
+elif(int(month)==11):
+	print("November");
+elif(int(month)==12):
+	print("December");
+else:
+	print("Wrong Entry");
+
+Program_19:Date and Time
+import datetime
+
+date_time=datetime.datetime.now();
+
+#Printing the date
+print("Current date : ", date_time.date());
+
+#Printing the time
+print("Current time : ", date_time.time());
+print("Current time : ", date_time.strftime("%H:%M:%S"));
+
+OutPut:
+Current date :  2023-07-31
+Current time :  14:27:36.088223
+Current time :  14:27:36
+
+
+Program_20:To check Python Version
+import os
+os.system("python --version");
+
+OutPut:
+Python 3.11.3
+
+Match Case:
+For reference purpose it is same like the switch in Java 
+
+Program_21:Match Case
+val=input("Enter the value : ");
+
+match val:
+	case "Monday":
+		print("We might have faced Monday blues");
+	case "Tuesday":
+		print("We might have faced Monday blues");
+	case "Friday":
+		print("We might have faced Monday blues");
+	case "4":
+		print("We ight have faced wednessday blues");
+	case _:
+		print("We might have faced",val,"blues");
+
+
+Program_22:
+#Guard in the match case {Guard is nothing but the use of conditional statement along with the case}
+
+val = input("Enter the value : ");
+
+match int(val) :
+	case 2 if(2%2==0):
+		print("It is a multiple of Two");
+
+	case 4 if(4%2==0):
+		print("It is a multiple of Two");
+
+	case 6 if(4%2==0):
+		print("It is a multiple of Two");
+
+	case 8 if(4%2==0):
+		print("It is a multiple of Two");
+
+	case 10 if(4%2==0):
+		print("It is a multiple of Two");
+
+	case _ :
+		print("wait till checking");
+		if(int(val)%2==0):
+			print("It is a multiple of Two")
+		else:
+			print("It is not a multiple of two")
+
+>>Looping Statements
+-for loop
+Program_23:
+str = "Deadshot";
+for st in str:
+	print(st);
+
+OutPut:
+D
+e
+a
+d
+s
+h
+o
+t
+
+Program_24:
+colours=["Red","Yellow","Blue","Green"]
+for colour in colours:
+	print(" ");
+	print(colour);
+	for c in colour:
+		print(c);
+
+OutPut:
+Red
+R
+e
+d
+
+Yellow
+Y
+e
+l
+l
+o
+w
+
+Blue
+B
+l
+u
+e
+
+Green
+G
+r
+e
+e
+n
+
+Program_25:
+for i in range(5):
+ print(i);
+print(" ");
+
+OutPut:
+0
+1
+2
+3
+4
+
+Note: Here range(5) means 0 to 4
+
+Program_26:
+for i in range(1,20):
+ print(i);
+print(" ");
+
+OutPut:
+0
+1
+2
+3
+4
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+
+Note: Here range(1,20) means 1 to 19
+
+Program_27:
+for i in range(0,20,2):
+ print(i);
+print(" ");
+
+OutPut:
+0
+2
+4
+6
+8
+10
+12
+14
+16
+18
+
+Note: Here range(0,20,2) means 0 to 19 with a difference of 2 between them.
+
+Program_28:
+for i in range(0,20,4):
+ print(i);
+print(" ");
+
+OutPut:
+0
+4
+8
+12
+16
+
+Note: Here range(0,20,4) means 0 to 19 with a difference of 4 between them.
+
+Program_29:
+for i in range(-10,0):
+ print(i);
+print(" ");
+
+OutPut:
+-10
+-9
+-8
+-7
+-6
+-5
+-4
+-3
+-2
+-1
+
+-While Loop
+#Looping Statement
+'''
+#incremental while
+count = 1
+while(count<5):
+	print(count);
+	count = count +1;
+
+#incremental while
+count = 5
+while(count<=5):
+	print(count);
+	count = count -1;
+
+#while with else when while condition is true
+count = 1
+while(count<5):
+	print(count);
+	count = count +1;
+else:
+	print("Loop Out");
+
+#while with else when while condition is false
+count = 1
+while(count>5):
+	print(count);
+	count = count +1;
+else:
+	print("Loop Out");
+
+Program_30:Break and Continue in for loop
+for i in range(1,20):
+	print (i);
+	if(i//2==5):
+		break;
+
+print("Out of the loop");
+print(" ");
+
+for i in range(1,20):
+	#print (i);
+	if(i//2==5):
+		continue;
+	else:
+		print(i);
+
+print("Out of the loop");
+
+OutPut:
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+Out of the loop
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+12
+13
+14
+15
+16
+17
+18
+19
+Out of the loop
+
+Program_31:Break and Continue in while loop
+i=1;
+while(i<=10):
+	if(i//2==3):
+		break;
+	else:
+		print(i);
+		i=i+1;
+
+print(" ");
+i=1;
+while(i<=10):
+	if(i//2==3):
+		i=i+1;
+		continue;
+	else:
+		print(i);
+		i=i+1;
+
+>>Functions
+for reference in java we have method and in python we have functions
+
+>>There are two types of functions
+-User Defined Functions
+-Built in Functions 
+	example:range()
+
+Program_32:Printing sum of Odd Numbers and Even Numbers
+#Without used defined functions
+
+#printing sum of odd numbers in the range of 1 to 10
+'''
+for i in range(1,10):
+	sum=0;
+	if (i%2!=0):
+		sum=sum+i;
+print("Sum of Odd Numbers : ",sum);
+
+
+#printing sum of even numbers in the range of 1 to 10
+
+for i in range(1,10):
+	esum=0;
+	if (i%2==0):
+		esum=esum+i;
+print("Sum of Even Numbers : ",esum);
+'''
+
+#printing sum of even numbers in the range of 1 to 10
+
+for i in range(0,10,2):
+	sum=0;
+	sum=sum+i;
+
+print("The sum of odd numbers in the range of 1 to 10 : ", sum) ;
+
+Program_33:
+#without function
+a=10;
+b=20;
+sum=a+b;
+print("The Sum :",sum)
+avg=a+b/2;
+print("The avg :",avg)
+
+
+c=10;
+d=20;
+sum=c+d;
+print("The Sum :",sum)
+avg=c+d/2;
+print("The avg :",avg)
+'''
+
+#with function
+def sum(x,y):
+	sum=x+y;
+	print(sum);
+
+a=12;
+b=10;
+sum(a,b);
+
+c=14;
+d=15;
+sum(c,d);
+
+>>Types of Functions
+-Positional Arguments
+def function(x,y):
+	return x+y;
+
+function(10,20);
+
+-Default Arguments
+def function(x="Deadshot",y="Sniper"):
+	return x+y;
+
+function(Sunil,Weapons);
+
+-variable argument
+def var_args(*num):
+	sum=0;
+	for i in num:
+		sum=sum+i;
+	print(sum);
+
+
+var_args(1,2,3,4,5);
+
+
+Note we cannot write an empty method:
+Example:
+def average():
+
+OutPut:
+C:\Code_P>Py_27.py
+  File "C:\Code_P\Py_27.py", line 18
+    def average():
+IndentationError: expected an indented block after function definition on line 18
+
+In order to avoid this
+def average():
+	pass
+
+or
+
+def average():
+	pass;
+#We won't be getting any such type of error
+
+>>List
+List is a DataType
+In list we can be able to store some list of data
+
+Program_34:
+#List
+
+l=[1,2,3,4,5,6,7,"Sunil","Deadshot","Sniper"]
+
+print(l[0]);
+print(l[1])
+print(" ");
+print("The length of the list l :",len(l));
+print(l[-3]);
+print(l[len(l)-3]);
+print(" ");
+print("OutPut using for loop")
+for q in l:
+	print(q);
+
+OutPut:
+1
+2
+
+The length of the list l : 10
+Sunil
+Sunil
+
+OutPut using for loop
+1
+2
+3
+4
+5
+6
+7
+Sunil
+Deadshot
+Sniper
+
+Program_35:We can also use if as 
+str="Deadshot";
+
+if "d" in str:
+	print("Yes it is !");
+else:
+	print("No it is not !");
+
+
+l=[1,2,3,4,5,6,7,8,9];
+
+if "S" in l:
+	print("Yes it is !");
+else:
+	print("No it is not !");
+
+OutPut:
+Yes it is !
+No it is not !
+
+Program_36: Slicing in List
+l=[1,2,3,4,5,6,7,8,9];
+
+print(l[:]);
+print(l[0:len(l)]);
+print(l[0:3]);
+print(" ");
+for i in l :
+	print(i);
+
+OutPut:
+[1, 2, 3, 4, 5, 6, 7, 8, 9]
+[1, 2, 3, 4, 5, 6, 7, 8, 9]
+[1, 2, 3]
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+>>List Comprehension
+-In Case of Numbers
+*for i in range of 20 want to print i
+	l=[i for i in range(20)]
+	print(l);
+
+*for i in range of 50 want to print i only if (i%2==0)
+	l= [i for i in range(50) if(i%2==0)]
+	print(l);
+
+-In Case of Alphabets
+	l=[chr(ch) for ch in range(97,123)]	
+	print(l);
+
+	l=[chr(ch) for ch in range(65,91)]	
+	print(l);
+
+-Error
+	l=[ch for ch in range('A','Z')]
+	print(l); 'str' object cannot be interpreted as an integer
+
+>>List Methods
+Program_37:
+m=[i for i in range(20) if(i%2!=0)]
+print("The elemnets inside list m: ",m);
+
+l=[i for i in range(20) if(i%2==0)]
+print("The elemnets inside list l: ",l);
+print(" ");
+
+#append() to add values to the list
+l.append(20);
+l.append(1);
+print("The list l after appending : ",l);
+
+#extend() to add list
+l.extend(m);
+print(" ");
+print(l);
+print(m);
+
+#Note: when we try to extend the list then the irrespective of the fact whether they are having same value or not it will be printed.
+
+#count()
+print(" ");
+print("Occurence of 1 in the list l :",l.count(1));
+
+#index() to find the index of particular element
+print(" ");
+print("List to be considered :",l);
+print("Index value of the mentioned element is :",l.index(2));
+
+#index() to find the index of particular element at a particular range
+print(" ");
+print("List to be considered :",l);
+print("Index value of the mentioned element is :",l.index(1,12,len(l)));
+
+#insert() inserting the element
+print(" ");
+print("List to be considered :",m);
+m.insert(234,12);#It is not in the range but still if we write like this it will print the value at last.
+print(m);
+
+#copy()
+print(" ");
+'''
+here we have not used copy() 
+j=l;
+print(j);
+j[0]=1000;
+print("The changes made in list j : ",j);
+print("The changes made in list j will be affected in l :",l);
+'''
+j=l.copy();
+print(j);
+j[0]=1000;
+print("The changes made in list j : ",j);
+print("The changes made in list j will not be affected in l :",l);
+
+#reverse() to reverse the contents of the list
+print(" ");
+j=[18,24,3,4,53,6,68,7,8,23,12]
+j.reverse();
+print("The reverse of the list j :",j);
+
+#sort() to sort based on Smaller or Greater
+print(" ");
+j.sort();
+print("From Smaller to Greater :",j);
+
+#sort() to sort based on Greater to Smaller
+print(" ");
+j.sort(reverse=True);
+print("From Greater to Smaller:",j);
+
+#clear() to clear the list
+print(" ");
+l.clear();
+j.clear();
+m.clear();
+print(l,j,m);
+
+#pop() to remove the element based on index value
+k=[1,2,3,4,5,6,7];
+print(k.pop(3));#It will show which value is removed
+print(k);
+print(" ");
+
+#remove() to remove the element based on value
+b=[1,2,3,4,5,6,7];
+print(b.remove(3));#It will display : none
+print(b);
+
+Note: We will get TypeError: '<' not supported between instances of 'int' and 'str' when we try to sort a list containing str and int type of data.
+
+Program_38:Slicing in list
+l=[1,2,3,4,5,6,7,8];
+
+if 2 in l:
+	print("Positive !");
+else:
+	print("Negative !");
+
+if 90 in l:
+	print("Positive !");
+else:
+	print("Negative !");
+
+print(l[:]);#It means [0:len[l]]
+print(l[1:]);#It means [1:len[l]]
+print(l[:5]);#It means [0:5]
+
+OutPut:
+Positive !
+Negative !
+[1, 2, 3, 4, 5, 6, 7, 8]
+[2, 3, 4, 5, 6, 7, 8]
+[1, 2, 3, 4, 5]
+
+>>Tuples
+-Tuples are datatypes
+-Tuples are used to store some data
+-Tuples cannot be modified
+-Tuples are same as List, the only difference is that tuples cannot be modified
+
+>>Methods of Tuple
+-count()
+-index()
+
+Note: In order to make any change to the tuple we have to convert it to the list
+
+Program_39:Tuple cannot be modified
+tup=(1,2,3,4,5,6,7,8,9);
+print(type(tup),tup);
+tup[0]=20;
+print(tip)
+
+OutPut:
+<class 'tuple'> (1, 2, 3, 4, 5, 6, 7, 8, 9)
+Traceback (most recent call last):
+  File "C:\Code_P\Py_31.py", line 5, in <module>
+    tup[0]=20;
+    ~~~^^^
+TypeError: 'tuple' object does not support item assignment
+
+>>FString
+Note: We can also write as F"" and f""
+
+Program_40:Without fstr
+sentence="My name is {} and i am a {}";
+name="Deadshot";
+designation="Sniper";
+
+print(sentence.format(name,designation));
+print(sentence.format(designation,name));
+
+OutPut:
+My name is Deadshot and i am a Sniper
+My name is Sniper and i am a Deadshot
+
+Program_41:With fstr
+sentence="My name is {} and i am a {}";
+name="Deadshot";
+designation="Sniper";
+
+print(f"My name is {name} and i am a {designation}");
+
+OutPut:
+My name is Deadshot and i am a Sniper
+
+Program_42:fstr with functions?
+???????????????????  Py_37.py
+
+>>The Zen of Python
+Program_43:
+import this
+
+>>Doc String
+-Doc string should be the first line inside the function
+-These are the lines which can be printed and it will be having an impact on the program whereas the commented lines will not be having any impact on the program.
+
+Program_43:
+def something():
+	"""Roses are Red, Voilets are Blue , I have never seen anyone dumb like you"""
+
+print("Hello");
+
+something();
+print(something.__doc__);
+
+Output:
+Hello
+Roses are Red, Voilets are Blue , I have never seen anyone dumb like you
+
+
+Program_44:
+def something():
+	'''Roses are Red, Voilets are Blue , I have never seen anyone dumb like you'''
+
+print("Hello");
+
+something();
+print(something.__doc__);
+
+Output:
+Hello
+Roses are Red, Voilets are Blue , I have never seen anyone dumb like you
+
+Program_45:What will happen if we don't use it as a first line inside the function
+def something():
+	print("Hello");
+'''Roses are Red, Voilets are Blue , I have never seen anyone dumb like you'''
+
+something();
+print(something.__doc__);
+
+OutPut:
+Hello
+None
+
+Program_46:
+def ffact(n):
+	fact=1;
+	for i in range(1,n+1):
+		fact=fact*(i);
+	print(fact);
+
+ffact(5);
+print(" ");
+def rfact(n):
+    fact = n
+    for i in range(n-1, 0, -1):
+        fact = fact * i
+       #print(fact)
+    print(fact)
+
+rfact(5);
+
+OutPut:
+120
+
+120
+
+Program_47:Printing Negative numbers using for loop
+for i in range(5,0,-1):
+	print(i);
+
+OutPut:
+5
+4
+3
+2
+1
+
+>>Sets
+-Set items are unordered, unchangeable, and do not allow duplicate values.
+-Unordered means that the items in a set do not have a defined order.
+-Set items are unchangeable, meaning that we cannot change the items after the set has been created.
+-Sets cannot have two items with the same value.(Duplicates are not allowed)
+
+Program_48:
+s={"A","B","C","D"};
+print(type(s));
+
+OutPut:
+<class 'set'>
+
+Program_49:
+s=set(("A","B","C","D"))
+print(type(s));
+
+OutPut:
+<class 'set'>
+
+Program_50:
+s=set("Apple");
+#s=set('Apple');
+print(s);
+
+OutPut:
+{'l', 'e', 'A', 'p'}
+Note: OutPut may vary as we are playing with Set
+
+Program_51:
+s={}
+print(type(s));
+
+s=set();
+print(type(s));
+
+OutPut:
+<class 'dict'>
+<class 'set'>
+
+>>Sets Method
+#add() to add elements to the set
+s={"A","DeadShot",True,1};
+#Note : True and 1 are sam ein Python so technically it is a duplicate value
+print(s);
+
+OutPut:
+{True, 'DeadShot', 'A'}
+
+
+#clear() 
+s={"A","DeadShot",True,1};
+print(s);
+print(s.clear()); #None
+print(s);
+
+OutPut:
+{True, 'A', 'DeadShot'}
+None
+set()
+
+
+#copy()
+#Without copy()
+s={"A","DeadShot",True,1};
+print(s);
+m=s;
+m[0]=1;
+print(m);
+print(s);
+
+OutPut:
+{'A', 'DeadShot', True}
+Traceback (most recent call last):
+  File "C:\Code_P\Py_41.py", line 26, in <module>
+    m[0]=1;
+    ~^^^
+TypeError: 'set' object does not support item assignment
+
+#With copy()
+s={"A","DeadShot",True,1};
+print(s);
+m=s.copy();
+m[0]=1;
+print(m);
+print(s);
+
+OutPut:
+{True, 'A', 'DeadShot'}
+Traceback (most recent call last):
+  File "C:\Code_P\Py_41.py", line 27, in <module>
+    m[0]=1;
+    ~^^^
+TypeError: 'set' object does not support item assignment
+
+
+#difference
+set_1={1,2,3,4};
+set_2={3,4,5,6};
+print(set_1.difference(set_2));
+#print all the value of set_1 which are not in set_2
+OutPut:
+{1, 2}
+
+
+#difference_update
+set_1={1,2,3,4};
+set_2={3,4,5,6};
+print(set_1.difference_update(set_2));
+#We cannot print it if we try to do so we will get None
+#Update all the value of set_1 which are not in set_2 in set_1
+print(set_1);
+print(set_2);
+
+OutPut:
+None
+{1, 2}
+{3, 4, 5, 6}
+
+
+#intersection (common elements)
+set_1={1,2,3,4};
+set_2={3,4,5,6};
+print(set_1.intersection(set_2))
+
+OutPut:
+{3, 4}
+
+
+#intersection_update
+set_1={1,2,3,4};
+set_2={3,4,5,6};
+print(set_1.intersection_update(set_2))
+#We cannot print it if we try to do so we will get None
+print(set_1);
+print(set_2);
+
+OutPut:
+None
+{3, 4}
+{3, 4, 5, 6}
+
+
+#symmetric_difference it will remove all the common elements from both the set
+set_1={1,2,3,4};
+set_2={3,4,5,6};
+print(set_1.symmetric_difference(set_2));
+
+OutPut:
+{1, 2, 5, 6}
+
+
+#symmetric_difference_update
+set_1={1,2,3,4};
+set_2={3,4,5,6};
+set_1.symmetric_difference_update(set_2);
+print(set_1);
+
+OutPut:
+{1, 2, 5, 6}
+
+
+#isdisjoint means (in hindi vibhin karna) if both are different it will return true else it will return false
+set_1={1,2,3,4};
+set_2={3,4,5,6};
+print(set_1.isdisjoint(set_2));
+print(set_2.isdisjoint(set_1));
+
+set_3={1,2,3,4};
+set_4={5,6,7,8,9};
+print(set_3.isdisjoint(set_4));
+print(set_4.isdisjoint(set_3));
+
+OutPut:
+False
+False
+True
+True
+
+
+#issubset()
+set_1={1,2,3,4};
+set_2={3,4,5,6,1,2,3,4,5};
+print(set_1.issubset(set_2));
+print(set_2.issubset(set_1));
+
+set_3={1,2,3,4};
+set_4={3,4,5,6,1,2,3,4,5};
+print(set_3.issubset(set_4));
+print(set_4.issubset(set_3));
+
+OutPut:
+True
+False
+True
+False
+
+
+#issuperset()
+set_1={3,4,5,6,1,2,3,4,5};
+set_2={1,2,3,4};
+print(set_1.issuperset(set_2));
+print(set_2.issuperset(set_1));
+
+set_3={3,4,5,6,1,2,3,4,5};
+set_4={1,2,3,4};
+print(set_3.issuperset(set_4));
+print(set_4.issuperset(set_3));
+
+OutPut:
+True
+False
+True
+False
+
+
+#pop() by default it will remove the 0th index in set we don;t probide any index value ionside pop or else it will throw an error
+set_1={3,4,5,6,7,8,9};
+set_1.pop();
+print(set_1);
+set_1.pop();
+print(set_1);
+
+OutPut:
+{4, 5, 6, 7, 8, 9}
+{5, 6, 7, 8, 9}
+
+
+#remove()
+set_1={3,4,5,6,7,8,9};
+set_1.remove(6);
+print(set_1);
+
+OutPut:
+{3, 4, 5, 7, 8, 9}
+
+
+#union() it is same like the extend method in the list
+set_1={1,2,3,4,5,6,7};
+set_2={8,9,10,11,12};
+print(set_1.union(set_2));
+
+OutPut:
+{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}
+
+
+#update()
+set_1={1,2,3,4,5,6,7};
+set_2={8,9,10,11,12};
+set_1.update(set_2);
+print(set_1);
+
+OutPut:
+{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}
+
+>>Dictionaries
+-Dictionaries are used to store data values in key:value pairs.
+-A dictionary is a collection which is ordered*, changeable and do not allow duplicates.
+
+Program_52:
+thisdict={"name":"Deadshot",732:109,"Designation":"Sniper"};
+print(type(thisdict));
+print(thisdict["name"]);
+print(thisdict[732]);
+
+OutPut:
+<class 'dict'>
+Deadshot
+109
+Sniper
+
+Program_53:
+#Duplicates are not allowed in dictionaries
+thisdict={"name":"Deadshot",732:109,"Designation":"Sniper","Designation":"Weapon Master"};
+print(thisdict);
+#here the last value will override the previous value
+
+OutPut:
+{'name': 'Deadshot', 732: 109, 'Designation': 'Weapon Master'}
+
+Program_54:
+#Accessing the Keys
+thisdict={"name":"Deadshot",405:1234,"designation":"Sniper"};
+print(thisdict);
+
+for key in thisdict.keys():
+	print(key);
+
+OutPut:
+{'name': 'Deadshot', 405: 1234, 'designation': 'Sniper'}
+name
+405
+designation
+
+Program_56:
+#Accessing the values
+thisdict={"name":"Deadshot",405:1234,"designation":"Sniper"};
+print(thisdict);
+
+for value in thisdict.values():
+	print(value);
+
+OutPut:
+{'name': 'Deadshot', 405: 1234, 'designation': 'Sniper'}
+Deadshot
+1234
+Sniper
+
+Program_57:
+#Accessing both keys and value
+thisdict={"name":"Deadshot",405:1234,"designation":"Sniper"};
+print(thisdict);
+
+for key,val in thisdict.items():
+	print(f"The value of the attribute {{key}} : {{val}}");
+
+OutPut:
+{'name': 'Deadshot', 405: 1234, 'designation': 'Sniper'}
+The vaalue of the attribute {key} : {val}
+The vaalue of the attribute {key} : {val}
+The vaalue of the attribute {key} : {val}
+
+Program_58:
+#Accessing both keys and value
+thisdict={"name":"Deadshot",405:1234,"designation":"Sniper"};
+print(thisdict);
+
+for key,val in thisdict.items():
+	print(f"The value of the attribute {key} : {val}");
+
+OutPut:
+{'name': 'Deadshot', 405: 1234, 'designation': 'Sniper'}
+The value of the attribute name : Deadshot
+The value of the attribute 405 : 1234
+The value of the attribute designation : Sniper
+
+Program_59:Updating Item
+#Change items
+thisdict={"name":"Deadshot",405:1234,"designation":"Sniper"};
+print(thisdict);
+
+thisdict["designation"]="Weapon Master";
+print(thisdict);
+
+OutPut:
+{'name': 'Deadshot', 405: 1234, 'designation': 'Sniper'}
+{'name': 'Deadshot', 405: 1234, 'designation': 'Weapon Master'}
+
+
+#Update items
+thisdict={"name":"Deadshot",405:1234,"designation":"Sniper"};
+print(thisdict);
+
+thisdict.update({"desigantion":"Weapon Master"});
+print(thisdict);
+
+OutPut:
+{'name': 'Deadshot', 405: 1234, 'designation': 'Sniper'}
+{'name': 'Deadshot', 405: 1234, 'designation': 'Sniper', 'desigantion': 'Weapon Master'}
+
+
+#Add items
+thisdict={"name":"Deadshot",405:1234,"designation":"Sniper"};
+print(thisdict);
+
+thisdict["mode"]="Stealth";
+print(thisdict);
+
+OutPut:
+{'name': 'Deadshot', 405: 1234, 'designation': 'Sniper'}
+{'name': 'Deadshot', 405: 1234, 'designation': 'Sniper', 'mode': 'Stealth'}
+
+
+#Add items
+thisdict={"name":"Deadshot",405:1234,"designation":"Sniper"};
+print(thisdict);
+
+thisdict.update({"mode":"Deadly Stealth"});
+print(thisdict);
+
+OutPut:
+{'name': 'Deadshot', 405: 1234, 'designation': 'Sniper'}
+{'name': 'Deadshot', 405: 1234, 'designation': 'Sniper', 'mode': 'Deadly Stealth'}
+
+Program_60:Removing the item
+#pop() we have to mention the value
+thisdict={"name":"Deadshot",405:1234,"designation":"Sniper"};
+print(thisdict);
+
+thisdict.pop(405);
+print(thisdict);
+
+OutPut:
+{'name': 'Deadshot', 405: 1234, 'designation': 'Sniper'}
+{'name': 'Deadshot', 'designation': 'Sniper'}
+
+
+#popitem() it will automatically remove the last key and value pair
+thisdict={"name":"Deadshot",405:1234,"designation":"Sniper"};
+print(thisdict);
+
+thisdict.popitem();
+print(thisdict);
+
+OutPut:
+{'name': 'Deadshot', 405: 1234, 'designation': 'Sniper'}
+{'name': 'Deadshot', 405: 1234}
+
+
+#del keyword
+thisdict={"name":"Deadshot",405:1234,"designation":"Sniper"};
+print(thisdict);
+
+del thisdict[405];
+print(thisdict);
+
+OutPut:
+{'name': 'Deadshot', 405: 1234, 'designation': 'Sniper'}
+{'name': 'Deadshot', 'designation': 'Sniper'}
+
+
+#del keyword
+thisdict={"name":"Deadshot",405:1234,"designation":"Sniper"};
+print(thisdict);
+
+del thisdict;
+print(thisdict);
+
+OutPut:
+Traceback (most recent call last):
+  File "./prog.py", line 5, in <module>
+NameError: name 'thisdict' is not defined
+
+Program_61:Copy
+thisdict={"name":"Deadshot",405:1234,"designation":"Sniper"};
+print(thisdict);
+
+thisdummy=thisdict.copy();
+print(thisdummy);
+
+OutPut:
+{'name': 'Deadshot', 405: 1234, 'designation': 'Sniper'}
+{'name': 'Deadshot', 405: 1234, 'designation': 'Sniper'}
+
+Program_62:Difference 
+Program:
+thisdict={"name":"Deadshot",405:1234,"designation":"Sniper"};
+print(thisdict);
+
+print(thisdict.get("roll"));
+
+OutPut:
+{'name': 'Deadshot', 405: 1234, 'designation': 'Sniper'}
+None
+
+
+Program:
+thisdict={"name":"Deadshot",405:1234,"designation":"Sniper"};
+print(thisdict);
+
+print(thisdict.["name"]);
+
+OutPut:
+{'name': 'Deadshot', 405: 1234, 'designation': 'Sniper'}
+Traceback (most recent call last):
+  File "C:\Code_P\Py_50.py", line 5, in <module>
+    print(thisdict["roll"]);
+          ~~~~~~~~^^^^^^^^
+KeyError: 'roll'
+
+
+
+
+
+
